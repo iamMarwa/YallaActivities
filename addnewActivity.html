@@ -16,7 +16,7 @@
   <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/heroes/">
   <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-  <title>Yalla! Activities</title>
+  <title>Yalla! Activities - Add new activity</title>
   <style>
     /* Resets */
     * {
@@ -136,7 +136,7 @@
         </ul>
         <ul class="navbar-nav ml-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link" href="/signup">Sign Up</a>
+            <a class="nav-link" href="/registration.html">Sign Up</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#login">Login</a>
@@ -147,16 +147,70 @@
   </nav>
   
   <div class="container" style="margin-top: 5em; max-width: 40em;">
-    <form action="/login" method="post">
-        <!-- user input-->
-        Username:<br>
-        <input type="text" name="email" placeholder="Email" required><br><br>
-        Password:<br>
-        <input type="password" name="password" placeholder="Password" required><br><br>
-        <!-- submit button -->
-        <input type="submit" value="login">
-      </form>
+            
+    <h1>Add New Activity</h1>
+    <br/>
 
+    <label>Enter Activity Title *</label>
+    <input class="field form-control" name="name" type="text" />
+
+    <label>Enter Activity Location *</label>
+    <input class="field form-control" name="location" type="text" />
+
+    <label>Enter Activity Date *</label>
+    <input class="field form-control" name="date" type="text" />
+
+    <label></label>
+    <input class="field form-control" name="category" type="text" />
+
+    <form>
+      <label for="category">Enter which category *</label>
+      <select name="category" id="category">
+        <option value="Hiking">Hiking</option>
+        <option value="Camping">Camping</option>
+        <option value="Yoga">Yoga</option>
+        <option value="Surfing">Surfing</option>
+      </select>
+      <br><br>
+
+
+
+    <label>Enter the price </label>
+    <input class="field form-control" name="price" type="text" />
+
+    <br/><br/>
+    <label>Enter Activity Description </label>
+    <textarea class="field form-control" name="price" type="text" rows="10" cols="30">The cat was playing in the garden.</textarea>
+
+    <br/><br/>
+
+    <label>Upload activity picture</label>
+    <input class="field form-control" id="photo" name="file" type="text"/>
+
+    <br/><br/>
+    <br/><br/>
+
+    <div style="display: none" 
+    class="alert alert-danger act-errors">
+    </div>
+
+    <div style="display: none" 
+    class="alert alert-success act-success">
+    You have added the activity successfully!
+    </div>
+
+    <br/>
+
+    <button 
+    class="btn btn-primary"
+    onClick="AddnewActivity()"
+    style="padding: 10px; font-size: 16px;">
+        Add New Activity
+    </button>
+
+</div>
+
+<script type="text/JavaScript" src="./addnewActivity.js"></script>
     <!-- Footer-->
     <div class="container" id="contact">
       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
